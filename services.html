@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+    <style>
+        main {
+            width: 100%;
+            height: 90vh;
+            background-image: url('./img/bg_crime.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #main_card{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }          
+        #main_card::before{
+            background:url('./img/bg_cime.jpg') no-repeat center center/cover;
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            opacity: 0.8;
+            z-index: -1;
+        }          
+        .card {
+            width: 413px;
+            height: 630px;
+            margin: 25px;
+            border-radius: 50px;
+            border: 5px solid black;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #main_card .card img {
+            width: 413px;
+            height: 242px;
+            margin: 20px 0px;
+        }
+
+        
+        @media screen and (max-width:1370px) {
+            #main_card{
+                display: inline-block;
+                margin: 10px auto;
+            }
+            .card{
+                display: inline-block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul id="com_logo">
+                <li class="hl_nav"><a href="#"><img class="logo" src="./img/LOGO.PNG" alt="GUMSHUDA"></a></li>
+            </ul>
+
+            <ul class="hu_nav">
+                <li class="hl_nav"><a class="bor" href="./index.html">Home</a></li>
+                <li class="hl_nav"><a class="bor" href="./services.html">Services</a></li>
+                <li class="hl_nav"><a class="bor" href="./about.html">About</a></li>
+                <li class="hl_nav"><a class="bor" href="./contact_us.html">Contact</a></li>
+            </ul>
+            <ul class="hu_nav">
+                <li class="hl_nav"><a href=""><button class="Sign_up">Sign Up</button></li></a>
+                <li class="hl_nav"><a href="./login.html"><button class="btn">Login</button></li></a>
+            </ul>
+            <div id="OpenMenu" onclick="show()"><img width="65px" src="./img/hamburger_menu.png" alt=""></div>
+            <div id="CloseMenu" onclick="close()"><img width="65px" src="./img/close_hamburger.jpg" alt=""></div>
+        </nav>
+    </header>
+    <section class="error"><p>Dude Your Performing Unrelated operation</p></section>
+    <main>
+        <section id="main_card">
+            <div class="card">
+                <h1>FIND OUT</h1>
+                    <div>
+                        <img src="./img/missing.jpg" alt="IMAGE">
+                    </div>
+                    <p style="text-align: center;margin: 10px">Identify your loved ones in just few clicks</p>
+                    <a href="./verify.html"><button class="btn">Click Here</button></a>
+            </div>
+            <div class="card">
+                <h1>CRIMINAL INVESTIGATION</h1>
+                    <div>
+                        <img src="./img/investigation.jpg" alt="IMAGE">
+                    </div>
+                    <p style="text-align: center;margin: 10px">Here is the GTM to help you there by providing our services combined with AI</p>
+                    <a href="./verify.html"><button class="btn">Click Here</button></a>
+            </div>
+            <div class="card">
+                <h1>iDENTIFY DEAD BODIES</h1>
+                    <div>
+                        <img src="./img/dead-body-1489681310.jpg" alt="IMAGE">
+                    </div>
+                    <p style="text-align: center;margin: 10px">GTM is also helpful for crime investigation department for identifying dead bodies</p>
+                    <a href="./verify.html"><button class="btn">Click Here</button></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="footer1">
+            <div>
+            <img class="logo" src="./img/LOGO.PNG" alt="GUMSHUDA">
+            </div>
+            <br>
+            <div>
+                <p>Copy Right &copy; All Rights Reserved 2022-2025</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="./javascript/engine.js"></script>
+
+</html>

@@ -1,9 +1,6 @@
 function show(){
-    var x=document.getElementById('hu_nav');
-    if(x.style.display==="none"){
-        x.style.display="block";
-    }
-    else{
-        x.style.display="none";
-    }
+    const hamburger_menu=document.getElementsByClassName('hamburger');
+    const mobile_nav=document.getElementsByClassName('menu');
+    mobile_nav[0].classList.toggle('is-activemenu');
+    hamburger_menu[0].classList.toggle('is-active');
 }

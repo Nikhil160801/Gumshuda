@@ -10,7 +10,6 @@
     <style>
         main {
             width: 100%;
-            height: 85vh;
             background-image: url('./img/back_login.jpg');
             background-repeat: no-repeat;
             background-size: cover;
@@ -25,18 +24,12 @@
 
 
         #sec_login form {
-            box-sizing: border-box;
-
-            position: relative;
-            width: 40%;
+            width: 550px;
             height: 560px;
-            left: 50px;
-            top: 30px;
-
             background: #FFFFFF;
             border: 1px solid #000000;
             border-radius: 50px;
-
+            margin: 1rem;
             display: flex;
             align-items: center;
             flex-direction: column;
@@ -68,6 +61,17 @@
             margin: 14px;
             font-size: 20px;
         }
+
+        @media screen and (max-width:550px) {
+            #sec_login form {
+                width: 420px;
+                height: 500px;
+            }
+
+            #sec_login form input {
+                width: 320px;
+            }
+        }
     </style>
 </head>
 
@@ -79,7 +83,7 @@
             </ul>
 
             <ul class="hu_nav">
-                <li class="hl_nav"><a class="bor" href="./index.html">Home</a></li>
+                <li class="hl_nav"><a class="bor" href="/">Home</a></li>
                 <li class="hl_nav"><a class="bor" href="./services.html">Services</a></li>
                 <li class="hl_nav"><a class="bor" href="./about.html">About</a></li>
                 <li class="hl_nav"><a class="bor" href="./contact_us.html">Contact</a></li>
@@ -88,10 +92,26 @@
                 <li class="hl_nav"><a href=""><button class="Sign_up">Sign Up</button></li></a>
                 <li class="hl_nav"><a href="./login.html"><button class="btn">Login</button></li></a>
             </ul>
-            <div id="OpenMenu" onclick="show()"><img width="65px" src="./img/hamburger_menu.png" alt=""></div>
-            <div id="CloseMenu" onclick="close()"><img width="65px" src="./img/close_hamburger.jpg" alt=""></div>
+            <button class="hamburger" onclick="show()">
+                <div class="bar"></div>
+            </button>
+        </nav>
+        <nav class="menu">
+            <ul class="menuitems">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact_us.html">contact_us</a></li>
+                <li><a href=""><button class="Sign_up">Sign Up</button></li></a>
+                <li><a href="./login.html"><button class="btn">Login</button></li></a>
+            </ul>
         </nav>
     </header>
+    <div id="empty"></div>
+    <hr>
+    <section class="error">
+        <p>To view this website please use a larger screen size device</p>
+    </section>
     <hr>
     <main>
         <section id="sec_login">
@@ -116,6 +136,7 @@
             </div>
         </div>
     </footer>
+    <script src="./javascript/engine.js"></script>
 </body>
 
 </html>

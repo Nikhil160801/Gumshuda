@@ -4,6 +4,7 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
+    font-size: 1rem;
 }
 
 body {
@@ -63,7 +64,7 @@ header nav {
     padding: 14px 46px;
     background-color: aqua;
     border-radius: 50px;
-    margin: 10px;
+    margin: 5px;
 }
 
 .btn:hover {
@@ -90,17 +91,63 @@ header nav {
     border-radius: 50px;
 }
 
-#OpenMenu {
+.hamburger{
+    width: 60px;
+    height: 50px;
+    border: none;
+    background: none;
+    margin: 12px 0px;
     display: none;
-    cursor: pointer;
 }
 
-#CloseMenu {
-    display: none;
-    cursor: pointer;
+.hamburger::after,.bar,.hamburger::before{
+    content: '';
+    position: relative;
+    width: 100%;
+    height: 8px;;
+    background-color: black;
+    border-radius: 50px;
+    display: block;
+    margin: 0.5rem 0px;
+    transition: 0.4s;
 }
 
-/* Main */
+.is-active::before{
+    transform: rotate(45deg) translate(11px,12px);
+}
+.is-active .bar{
+    opacity: 0;
+}
+.is-active::after{
+    transform: rotate(-45deg) translate(9px,-13px);
+}
+
+.menu{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+
+    background-color: black;
+    width: 100%;
+    left: 100%;
+
+}
+.menu .menuitems li{
+    list-style: none;
+    text-align: center;
+    margin: 3rem;
+}
+.menu .menuitems li a{
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 10px;
+    color: white;
+}
+
+.is-activemenu{
+    left: 0px;
+    overflow: scroll;
+}
 
 main {
     width: 100%;
@@ -123,7 +170,6 @@ main {
     display: none;
 }
 
-*/
 /* footer */
 
 footer {
@@ -151,8 +197,7 @@ footer #footer1 {
     .hu_nav {
         display: none;
     }
-
-    #OpenMenu {
+    .hamburger{
         display: block;
     }
 }

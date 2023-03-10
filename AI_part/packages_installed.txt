@@ -1,0 +1,12 @@
+pip install opencv-contrib-python
+pip install caer
+ 
+
+Face Detection
+    Detects the presence of Face
+
+Face Recognition
+    Detects who's face it is 
+
+Face Detection is performed by using a classifier. Classifier is a algorithm whether the given image is positive or negative
+Haarcascade and local_binary_pattern are classifiers which are used for face detection.

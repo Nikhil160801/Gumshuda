@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/css/style.css">
     <title>Document</title>
     <style>
         .msec_1 {
             width: 100%;
             height: 90vh;
-            background-image: url('/static/img/bg_investigation.PNG');
+            background-image: url('/static/img/bg_investigation.PNG')  ;
             background-repeat: no-repeat;
             background-size: 100% 100%;
             opacity: 0.7;
@@ -19,6 +20,12 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+
 
         }
 
@@ -105,13 +112,13 @@
             </ul>
         </nav>
     </header>
-    <div id="empty"></div>
-    <hr>
+    <!-- <div id="empty"></div>
+    <hr> -->
     <section class="error">
         <p>To view this website please use a larger screen size device</p>
     </section>
     <main>
-        <section class="msec_1">
+        <section class="msec_1" style="opacity: 100%;">
             <!-- uandv upload and verify your photograph -->
             <!-- <div class="uandv">
                 <img id="image">
@@ -126,8 +133,11 @@
                 
             </div> -->
             <form action="/search_img" method="post" enctype="multipart/form-data">
-                <label for="path">Criminal photo path:</label>
-                <input type="text" id="path" name="path" required><br><br>
+                <label for="path" style="font-size: 24px; color: rgb(11, 10, 10); margin:auto; display:block;text-align: center ">  UPLOAD IMAGE:</label>
+                <input type="file" style="  margin:30px; display:block;text-align: center; padding-top: 4%;" name="path" id="path"><br><br>
+                <button style="  margin:auto; display:block; " class="Sign_up">
+                    <input type="submit"  value="submit">
+                </button>
             </form>
 
 
@@ -141,7 +151,7 @@
     <footer>
         <div id="footer1">
             <div>
-                <img class="logo" src="./img/LOGO.PNG" alt="GUMSHUDA">
+                <img class="logo" src="/static/img/LOGO.PNG" alt="GUMSHUDA">
             </div>
             <br>
             <div>
@@ -149,7 +159,7 @@
             </div>
         </div>
     </footer>
-    <script src="./javascript/engine.js"></script>
+    <script src="/static/javascript/engine.js"></script>
     <script>
         const file = document.querySelector("#file")
         file.addEventListener("change", function () {
